@@ -1,0 +1,7 @@
+INFO cronalt.Scheduler starting job job:canceller
+INFO cronalt.Scheduler next run job:cancellernext_run:2021-01-01T01:01:01Z
+INFO cronalt.Scheduler queued job:canceller
+INFO cronalt.Scheduler running job:canceller
+INFO cronalt.Scheduler completed job:canceller
+INFO cronalt.Scheduler next run job:cancellernext_run:2120-12-08T01:01:01Z
+INFO cronalt.Scheduler halted job:canceller
