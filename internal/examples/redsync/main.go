@@ -43,7 +43,7 @@ func main() {
 
 	scheduler2, _ := cronalt.NewScheduler(10, cronalt.WithLogger(loggylog))
 	scheduler2.Schedule(
-		cronalt.Every(50*time.Second),
+		cronalt.Every(45*time.Second),
 		job.Decorate(echoJob{}, cronaltredsync.WithLocker(rs, redsync.WithTries(1))),
 	)
 
@@ -90,29 +90,4 @@ func (echoJob) Name() string {
 
 func (echoJob) Runner() job.JobFn {
 	return echo
-}
-
-type foo struct{}
-
-func (foo) Name() string {
-	return "foo"
-}
-
-func (foo) Runner() job.JobFn {
-	return func(ctx context.Context) error {
-		fmt.Println("foo")
-		return nil
-	}
-}
-
-type panicker struct{}
-
-func (panicker) Name() string {
-	return "panicker"
-}
-
-func (panicker) Runner() job.JobFn {
-	return func(ctx context.Context) error {
-		panic(fmt.Errorf("panicker panicking"))
-	}
 }
