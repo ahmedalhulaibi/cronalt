@@ -58,3 +58,7 @@ Decorate your job with a context decorator.
 See [`internal/examples/runid`](internal/examples/runid) for an example
 
 ### How do I dynamically add and remove jobs?
+
+This is not supported out of the box.
+
+See [`internal/examples/dynamicscheduling`](internal/examples/dynamicscheduling) for an example of a dynamic scheduler built around `cronalt.Scheduler`
