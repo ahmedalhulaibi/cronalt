@@ -39,6 +39,13 @@ Decorate your job with a locker implementation.
 
 See [`internal/examples/redsync`](internal/examples/redsync) for an example.
 
+Please beware that using Redis for locks as demonstrated in the example can lead to unintended consequences. This example is not tested in production. If you're worried about race conditions, consider redesigning your process such that it does not require a distributed lock.
+
+Additional reading:
+- [How to do distributed locking by Martin Kleppmann](https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html)
+- [Is Redlock safe? by Salvatore Sanfilippo](http://antirez.com/news/101)
+- [redlock: unsafe at any time by Alisdair Sullivan](https://medium.com/@talentdeficit/redlock-unsafe-at-any-time-40ceac109dbb#.j9ekopmcm)
+
 ### How do I handle an error if my job fails?
 
 Decorate your job with an error handler implementation.
