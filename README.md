@@ -61,4 +61,8 @@ See [`internal/examples/runid`](internal/examples/runid) for an example
 
 This is not supported out of the box.
 
-See [`internal/examples/dynamicscheduling`](internal/examples/dynamicscheduling) for an example of a dynamic scheduler built around `cronalt.Scheduler`
+See [`internal/examples/dynamicscheduling`](internal/examples/dynamicscheduling) for an example of a dynamic scheduler built around `cronalt.Scheduler`.
+
+### How do I capture the number of times my job has run?
+
+Decorate your job with a counter. See [`extensions/counter/counter.go`](extensions/counter/counter.go) for the job decorator.
