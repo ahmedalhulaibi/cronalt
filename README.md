@@ -1,8 +1,8 @@
 # cronalt
 
-Golang job scheduling
-- Runs in-process
-- Type-safe (avoids reflection)
+cronalt is a Golang job scheduling package that allows you to run jobs at a given interval.
+- Scheduler runs in-process
+- Runtime safety (avoids reflection)
 - Pluggable and extensible
 
 cronalt is inspired by [gocron](https://github.com/go-co-op/gocron)
